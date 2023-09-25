@@ -5,7 +5,7 @@ useDotenv: true
 provider:
   name: aws
   runtime: nodejs18.x
-  profile: firefields
+  profile: lambda-admin
   stage: dev
   region: eu-west-2
 
