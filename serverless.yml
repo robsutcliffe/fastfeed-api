@@ -1,0 +1,19 @@
+service: fastfeed-api
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  profile: firefields
+  stage: dev
+  region: eu-west-2
+
+functions:
+  posts:
+    handler: src/posts.handler
+    events:
+      - http: 'GET /posts'
+
+plugins:
+  - serverless-offline
